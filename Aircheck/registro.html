@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Fuentes de Google -->
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+        <title>Monitoreo de Calidad del Aire</title>
+        <link rel="stylesheet" href="inicio.css">
+    </head>  
+<body>
+    
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="principal.html">BIENVENIDA</a>
+            <a href="inicio.html">INICIO DE SESIÓN</a>
+            <a href="registro.html">REGISTRO</a>
+            <a href="Metas.html">METAS</a> 
+
+        </nav>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main>
+        <div class="left-side">
+            <h2>Registro</h2>
+            <p>¡Bienvenido! Sé parte del cambio registrándote hoy. Una vez registrado, podrás interactuar y contribuir activamente a mejorar nuestro entorno. ¡Juntos podemos hacer la diferencia!</p>
+        </div>
+
+        <div class="right-side">
+            <form id="registroForm">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                <input type="tel" id="celular" name="celular" placeholder="Celular" required>
+                <input type="text" id="tipo-identificacion" name="tipo-identificacion" placeholder="Tipo de Identificación" required>
+                <input type="text" id="numero-identificacion" name="numero-identificacion" placeholder="Número de identificación" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+
+                <label for="verificacion">VERIFICACIÓN</label>
+                <div>
+                    <button type="button" id="correo-verificacion" name="verificacion" value="correo">Verificación por correo</button>
+                    <button type="button" id="sms-verificacion" name="verificacion" value="sms">Verificación por SMS</button>
+                </div>
+
+                <button type="button" onclick="window.location.href='encuesta.html'">Ingresar</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

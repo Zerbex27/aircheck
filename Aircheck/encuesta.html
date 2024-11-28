@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+    <title>Monitoreo de Calidad del Aire</title>
+    <link rel="stylesheet" href="encuesta.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="principal.html">BIENVENIDA</a>
+            <a href="inicio.html">INICIO DE SESIÓN</a>
+            <a href="registro.html">REGISTRO</a>
+            <a href="metas.html">Metas</a>
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Encuesta "AirCheck"</h1>
+        <form id="questionnaire">
+            <p>Por favor, responda a las siguientes preguntas. Cada respuesta tiene un valor asociado que se sumará para calcular su huella de carbono.</p>
+            
+            <!-- Lista de preguntas -->
+            <div class="question1">
+                <label>¿Usas transporte público o bicicleta en lugar de coche o moto para tus desplazamientos diarios?</label><br>
+                <input type="radio" name="question1" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question1" value="no"> <label>No</label>
+            </div>
+
+            <div class="question2">
+                <label>¿Dejas luces o aparatos electrónicos encendidos cuando no los estás utilizando?</label><br>
+                <input type="radio" name="question2" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question2" value="no"> <label>No</label>
+            </div>
+
+            <div class="question3">
+                <label>¿Tienes electrodomésticos de bajo consumo energético en tu hogar?</label><br>
+                <input type="radio" name="question3" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question3" value="no"> <label>No</label>
+            </div>
+
+            <div class="question4">
+                <label>¿Reciclas tus residuos en casa (papel, vidrio, plástico, etc.)?</label><br>
+                <input type="radio" name="question4" value="yes"><label> Sí</label><br>
+                <input type="radio" name="question4" value="no"> <label>No</label>
+            </div>
+
+            <div class="question5">
+                <label>¿Tienes algún sistema de energía renovable en tu hogar (como paneles solares)?</label><br>
+                <input type="radio" name="question5" value="yes"><label> Sí</label><br>
+                <input type="radio" name="question5" value="no"> <label>No</label>
+            </div>
+
+            <div class="question6">
+                <label>¿Dejas el grifo abierto mientras te cepillas los dientes o lavas los platos?</label><br>
+                <input type="radio" name="question6" value="yes"><label> Sí</label><br>
+                <input type="radio" name="question6" value="no"> <label>No</label>
+            </div>
+
+            <div class="question7">
+                <label>¿Usas calefacción o aire acondicionado con mucha frecuencia durante todo el año?</label><br>
+                <input type="radio" name="question7" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question7" value="no"> <label>No</label>
+            </div>
+
+            <div class="question8">
+                <label>¿Tienes una buena práctica de ahorro de agua (por ejemplo, duchas rápidas, no llenar la bañera)?</label><br>
+                <input type="radio" name="question8" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question8" value="no"> <label>No</label>
+            </div>
+
+            <div class="question9">
+                <label>¿Usas productos de un solo uso, como botellas plásticas, bolsas o utensilios desechables?</label><br>
+                <input type="radio" name="question9" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question9" value="no"> <label>No</label>
+            </div>
+
+            <div class="question10">
+                <label>¿Realizas viajes largos en avión con frecuencia?</label><br>
+                <input type="radio" name="question10" value="yes"> <label> Sí</label><br>
+                <input type="radio" name="question10" value="no"> <label>No</label>
+            </div>
+
+            <button type="button" id="calculate-btn" class="calculate-button">Enviar</button>
+    </form>
+
+    <div id="total-puntos"></div>
+</div>
+
+<script>
+document.getElementById("calculate-btn").addEventListener("click", function () {
+        // Aquí debes calcular el porcentaje de huella de carbono según las respuestas del usuario
+        let totalPoints = 0;
+
+        if (document.querySelector('input[name="question1"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question1"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question2"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question2"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question3"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question3"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question4"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question4"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question5"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question5"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question6"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question6"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question7"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question7"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question8"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question8"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+        
+        if (document.querySelector('input[name="question9"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question9"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+
+        if (document.querySelector('input[name="question10"]:checked').value === "no") {
+            totalPoints += 10;
+        }
+        if (document.querySelector('input[name="question10"]:checked').value === "yes") {
+            totalPoints += 0;
+        }
+        
+
+        // Aquí se debe realizar el cálculo adecuado del total de puntos basado en todas las preguntas
+        const percentage = (totalPoints / 100) * 100; // Este cálculo es solo un ejemplo
+
+        // Redirigir a la página de resultados con el porcentaje como parámetro en la URL
+        window.location.href = `resultado.html?percentage=${percentage}`;
+    });
+</script>
+
+</body>
+</html>

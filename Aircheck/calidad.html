@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad del Aire en Bogotá</title>
+    <link rel="stylesheet" href="calidad.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="resultado.html">Tu Huella</a>
+            <a href="calidad.html">Mapas</a>
+            <a href="rank.html">EcoTracker</a>
+            <a href="metas.html">Metas</a> 
+
+
+    </header>
+
+    <main class="content">
+        <h1>Calidad del Aire según tu ubicación</h1>
+<div id="app">
+        <form id="location-form">
+            <form id="location-form">
+                <button class="submit-button" type="submit">Obtener calidad del aire basado en mi ubicacion actual</button>
+                  <p>obtener calidad del aire basada en la ubicacion del mapa</p>
+    <div id="map"></div>
+    <div id="results"></div>
+            </form>
+        </form>
+    </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Monitoreo de Calidad del Aire</p>
+    </footer>
+     <script src="prueba.js"></script>
+</body>
+</html>

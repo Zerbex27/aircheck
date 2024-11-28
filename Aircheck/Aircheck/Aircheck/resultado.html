@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Fuentes de Google -->
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+        <title>Monitoreo de Calidad del Aire</title>
+        <link rel="stylesheet" href="resultado.css">
+    </head>  
+<body>
+    
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="resultado.html">Tu Huella</a>
+            <a href="calidad.html">Mapas</a>
+            <a href="rank.html">EcoTracker</a>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Su Resultado de Contaminación</h1>
+        <div class="content">
+            <div class="result-box">
+                <h2>125%</h2>
+                <p>El porcentaje general de 125% indica que la huella de contaminación del usuario excede en promedio en un 25% los umbrales de referencia establecidos para cada categoría. Esto sugiere que el usuario está generando más contaminación en comparación con los niveles ideales recomendados.</p>
+                <div class="buttons">
+                    <button class="btn">Ver más detalles</button>
+                    <button class="btn">Consejos y Noticias</button>
+                    <button class="btn" onclick="window.location.href='rank.html'">EcoTracker</button>
+                </div>
+            </div>
+            <div class="graph-box">
+                <p><img src="grafico.png" alt="Gráfico de contaminación" class="graph-image"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 AirCheck - Monitoreo de la Calidad del Aire</p>
+    </footer>
+</body>
+</html>

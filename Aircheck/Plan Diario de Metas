@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Diario de Metas</title>
+    <link rel="stylesheet" href="plan.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <nav class="nav-links">
+            <a href="resultado.html">Tu Huella</a>
+            <a href="calidad.html">Mapas</a>
+            <a href="rank.html">EcoTracker</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Plan Diario de Metas</h1>
+        <p>Completa las actividades diarias para ganar puntos y contribuir al cuidado del medio ambiente.</p>
+        
+        <section class="goals">
+            <h2>Metas del Día</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="goal1">
+                    <label for="goal1">Apagar los electrodomésticos cuando no los uses</label>
+                    <span class="points">+10 puntos</span>
+                </li>
+                <li>
+                    <input type="checkbox" id="goal2">
+                    <label for="goal2">Usar transporte público o compartir coche</label>
+                    <span class="points">+15 puntos</span>
+                </li>
+                <li>
+                    <input type="checkbox" id="goal3">
+                    <label for="goal3">Evitar el uso de plásticos de un solo uso</label>
+                    <span class="points">+20 puntos</span>
+                </li>
+                <li>
+                    <input type="checkbox" id="goal4">
+                    <label for="goal4">Consumir productos locales y de temporada</label>
+                    <span class="points">+15 puntos</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="score">
+            <h2>Puntaje Diario</h2>
+            <p>Total acumulado: <span id="daily-score">0</span> puntos</p>
+            <button onclick="calculateScore()">Calcular Puntaje</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Monitoreo de Calidad del Aire</p>
+    </footer>
+
+    <script>
+        function calculateScore() {
+            let score = 0;
+            if (document.getElementById('goal1').checked) score += 10;
+            if (document.getElementById('goal2').checked) score += 15;
+            if (document.getElementById('goal3').checked) score += 20;
+            if (document.getElementById('goal4').checked) score += 15;
+            document.getElementById('daily-score').textContent = score;
+        }
+    </script>
+</body>
+</html>

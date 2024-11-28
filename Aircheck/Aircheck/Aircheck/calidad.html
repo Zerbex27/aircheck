@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad del Aire en Bogotá</title>
+    <link rel="stylesheet" href="calidad.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="resultado.html">Tu Huella</a>
+            <a href="calidad.html">Mapas</a>
+            <a href="rank.html">EcoTracker</a>
+    </header>
+
+    <main class="content">
+        <h1>Calidad del Aire en Bogotá</h1>
+
+        <div class="info-section">
+            <div class="info-text">
+                <h2>Información sobre la Contaminación del Aire</h2>
+                <p>La contaminación del aire en Bogotá es un problema significativo que afecta la salud pública y el medio ambiente. Aquí puedes ver el estado actual de la calidad del aire en diferentes zonas de la ciudad.</p>
+                <p>Los niveles de PM2.5, PM10 y otros contaminantes son monitoreados en tiempo real para ayudar a los ciudadanos a tomar decisiones informadas sobre su salud y actividades al aire libre.</p>
+            </div>
+            <div class="info-map">
+                <div id="map"></div>
+                <p>Mapa interactivo de la calidad del aire en Bogotá (fuente: OpenStreetMap).</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Monitoreo de Calidad del Aire</p>
+    </footer>
+
+    <script>
+        
+        var map = L.map('map').setView([4.60971, -74.08175], 12); 
+
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
+</body>
+</html>

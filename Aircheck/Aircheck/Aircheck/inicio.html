@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Fuentes de Google -->
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+        <title>Monitoreo de Calidad del Aire</title>
+        <link rel="stylesheet" href="inicio.css">
+    </head>  
+<body>
+    
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="principal.html">BIENVENIDA</a>
+            <a href="inicio.html">INICIO DE SESIÓN</a>
+            <a href="registro.html">REGISTRO</a>
+        </nav>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main>
+        <div class="left-side">
+            <h2>Inicio de Sesión</h2>
+            <p>¡Bienvenido! Si ya te has registrado anteriormente, puedes continuar desde aquí. Si aún no lo has hecho, únete a nuestra misión y sé parte del cambio. Juntos podemos generar un impacto positivo en la naturaleza. Regístrate y contribuye a mejorar la calidad del aire y preservar nuestro entorno para futuras generaciones.</p>
+        </div>
+
+        <div class="right-side">
+            <form id="registroForm">
+            
+                <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+
+            
+                <button type="button" onclick="window.location.href='encuesta.html'">Ingresar</button>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

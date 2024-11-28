@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Fuentes de Google -->
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+        <title>Monitoreo de Calidad del Aire</title>
+        <link rel="stylesheet" href="encuesta.css">
+    </head>  
+<body>
+    
+    <header class="navbar">
+        <div class="logo">Monitoreo del Aire</div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="principal.html">BIENVENIDA</a>
+            <a href="inicio.html">INICIO DE SESIÓN</a>
+            <a href="registro.html">REGISTRO</a>
+        </nav>
+    </header>
+
+<body> 
+    <div class="container">
+        <h1>Encuesta "AirCheck"</h1>
+        <form>
+            <p>Por favor, responda a las siguientes preguntas. Cada respuesta tiene un valor asociado que se sumará para calcular su huella de carbono.</p>
+            
+            <div class="question">
+               <h> <label>1. ¿Con qué frecuencia utiliza el transporte público?</label><br>
+                <input type="radio" name="transporte" value="1"> Todos los días<br>
+                <input type="radio" name="transporte" value="2"> Varias veces a la semana<br>
+                <input type="radio" name="transporte" value="3"> Rara vez<br>
+                <input type="radio" name="transporte" value="4"> Nunca<br>
+            </h>
+            </div>
+
+            <div class="question">
+                <h><label>2. ¿Cuántos kilómetros recorre en automóvil a la semana?</label><br>
+                <input type="radio" name="automovil" value="1"> Menos de 10 km<br>
+                <input type="radio" name="automovil" value="2"> Entre 10 y 50 km<br>
+                <input type="radio" name="automovil" value="3"> Entre 51 y 100 km<br>
+                <input type="radio" name="automovil" value="4"> Más de 100 km<br>
+            </h>
+            </div>
+
+            <div class="question">
+                <h><label>3. ¿Qué tipo de energía utiliza en su hogar?</label><br>
+                <input type="radio" name="energia" value="1"> Energía renovable<br>
+                <input type="radio" name="energia" value="2"> Energía mixta<br>
+                <input type="radio" name="energia" value="3"> Energía no renovable<br>
+                <input type="radio" name="energia" value="4"> No estoy seguro<br>
+            </div>
+
+            <div class="question">
+                <h><label>4. ¿Con qué frecuencia consume productos locales o de temporada?</label><br>
+                <input type="radio" name="productos" value="1"> Siempre<br>
+                <input type="radio" name="productos" value="2"> A menudo<br>
+                <input type="radio" name="productos" value="3"> Rara vez<br>
+            </h> <input type="radio" name="productos" value="4"> Nunca<br>
+            </div>
+
+            <div class="question">
+                <h><label>5. ¿Cuántas veces a la semana come carne?</label><br>
+                <input type="radio" name="carne" value="1"> 0 veces<br>
+                <input type="radio" name="carne" value="2"> 1-2 veces<br>
+                <input type="radio" name="carne" value="3"> 3-4 veces<br>
+            </h>  <input type="radio" name="carne" value="4"> Más de 4 veces<br>
+            </div>
+
+            <button type="button" class="calculate-button" onclick="window.location.href='resultado.html'">Calcular huella de carbono</button>
+            <p>Total de puntos: <span id="total-puntos">9</span>. Muy baja huella de carbono.</p>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 AirCheck. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

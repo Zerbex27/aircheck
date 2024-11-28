@@ -1,0 +1,198 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3d4b22;
+    color: #041140;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #c5d99c;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #5b6e2c;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #c5d99c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.search-button:hover {
+    background-color: #5b6e2c;
+}
+
+.menu-button {
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #e9f0f2;
+}
+
+.left-side, .right-side {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 45%;
+}
+
+.left-side h2 {
+    color: #5b6e2c;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.right-side form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side input, .right-side button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.right-side input:focus {
+    border-color: #004904;
+}
+
+.right-side button {
+    background-color: #5b6e2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-side button:hover {
+    background-color: #c5d99c;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.ranking {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ranking h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #5b6e2c;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #5b6e2c;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.reward-info {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #5b6e2c;
+}
+
